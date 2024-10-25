@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "bsp_led.h": "c",
+        "bsp_delay.h": "c",
+        "bsp_int.h": "c",
+        "bsp_epit.h": "c"
+    }
+}
