@@ -2,5 +2,4 @@
 *.elf
 *.dis
 *.o
-obj/
 build/
