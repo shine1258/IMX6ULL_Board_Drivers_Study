@@ -54,6 +54,8 @@ VPATH := $(SRCDIRS)
 
 .PHONY : clean
 
+$(shell mkdir -p obj)
+
 $(TARGET).bin : $(OBJS)
 	$(LD) -Timx6u.lds -o $(TARGET).elf $^ $(LIBPATH)
 	$(OBJCOPY) -O binary -S $(TARGET).elf $@
@@ -67,6 +69,7 @@ $(COBJS) : obj/%.o : %.c
 
 clean:
 	rm -rf $(TARGET).bin $(TARGET).elf $(TARGET).dis $(OBJS)
+	rmdir obj
 
 print:
 	@echo INCLUDE = $(INCLUDE)
