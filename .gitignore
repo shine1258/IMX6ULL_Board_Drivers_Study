@@ -1,4 +1,6 @@
-.bin
-.elf
-.dis
+*.bin
+*.elf
+*.dis
+*.o
 obj/
+build/
